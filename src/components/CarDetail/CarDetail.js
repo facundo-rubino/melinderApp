@@ -228,12 +228,6 @@ const CarDetail = () => {
                                                     </button>
                                                 </>
                                             }
-                                            {/*  <button
-                                                onClick={() => manageCar("discard", idSearch)}
-                                                type="submit"
-                                                className="w-full rounded bg-red-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">
-                                                <HiOutlineTrash className="inline-block mr-1 text-white cursor-pointer" /> Eliminar de la búsqueda
-                                            </button> */}
                                         </form>
                                     </div>
 

@@ -9,7 +9,8 @@ import Loader from '../Loader/Loader'
 
 const Favorites = () => {
     const totalSearches = useSelector(state => state.objSearches.searches);
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
+    const [emptyFavs, setEmptyFavs] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
