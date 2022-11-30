@@ -118,9 +118,9 @@ const CarDetail = () => {
                 car: selectedCar,
             }
             dispatch(discardItem(newDiscard));
-            navigate('/historic')
 
         }
+        navigate('/historic')
         setLoading(true);
 
     }
@@ -200,25 +200,40 @@ const CarDetail = () => {
                                             </div>
 
                                             {isInFavs ?
-                                                <button
-                                                    type="button"
-                                                    className="w-full rounded border border-gray-300 bg-gray-400 px-6 py-3 text-sm font-bold text-white uppercase tracking-wide cursor-no-drop">
-                                                    <HiOutlineHeart className="inline-block mr-2 cursor-no-drop	" />Auto agregado a favoritos
-                                                </button>
+                                                <>
+                                                    <button
+                                                        type="button"
+                                                        className="w-full rounded border border-gray-300 bg-gray-400 px-6 py-3 text-sm font-bold text-white uppercase tracking-wide cursor-no-drop">
+                                                        <HiOutlineHeart className="inline-block mr-2 cursor-no-drop	" />Auto agregado a favoritos
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        className="w-full rounded border border-gray-300 bg-gray-400 px-6 py-3 text-sm font-bold text-white uppercase tracking-wide cursor-no-drop">
+                                                        <HiOutlineTrash className="inline-block mr-2 cursor-no-drop	" />No es posible descartarlo
+                                                    </button>
+                                                </>
                                                 :
-                                                <button
-                                                    onClick={() => manageCar("favorite", idSearch)}
-                                                    type="button"
-                                                    className="w-full rounded border border-gray-300 bg-MLgreen px-6 py-3 text-sm font-bold text-white uppercase tracking-wide">
-                                                    <HiOutlineHeart className="inline-block mr-2" />Añadir a favoritos
-                                                </button>
+                                                <>
+                                                    <button
+                                                        onClick={() => manageCar("favorite", idSearch)}
+                                                        type="button"
+                                                        className="w-full rounded border border-gray-300 bg-MLgreen px-6 py-3 text-sm font-bold text-white uppercase tracking-wide">
+                                                        <HiOutlineHeart className="inline-block mr-2" />Añadir a favoritos
+                                                    </button>
+                                                    <button
+                                                        onClick={() => manageCar("discard", idSearch)}
+                                                        type="submit"
+                                                        className="w-full rounded bg-red-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">
+                                                        <HiOutlineTrash className="inline-block mr-1 text-white cursor-pointer" /> Eliminar de la búsqueda
+                                                    </button>
+                                                </>
                                             }
-                                            <button
+                                            {/*  <button
                                                 onClick={() => manageCar("discard", idSearch)}
                                                 type="submit"
                                                 className="w-full rounded bg-red-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">
                                                 <HiOutlineTrash className="inline-block mr-1 text-white cursor-pointer" /> Eliminar de la búsqueda
-                                            </button>
+                                            </button> */}
                                         </form>
                                     </div>
 
