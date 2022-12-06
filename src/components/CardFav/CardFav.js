@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { HiHeart, HiOutlineHeart } from "react-icons/hi";
 import { dropFav } from '../../features/searchesSlice';
-import Loader from "../Loader/Loader"
 
 const CardFav = (car) => {
     const year = car.attributes.find((attribute) => attribute.id === "VEHICLE_YEAR");
@@ -59,8 +58,8 @@ const CardFav = (car) => {
                                          border-MLblue hover:bg-MLblue hover:text-white  cursor-pointer transition-all ease-in duration-200" value="Más información" /></Link>
                                 </div>
                                 <div onClick={() => unsaveFav(car.idSearch, car.idML)} className="inline-block m-auto my-2">
-                                    <HiOutlineHeart className="absolute text-5xl text-green-500" />
-                                    <HiHeart className="absolute text-5xl text-green-500 cursor-pointer hover:hidden transition-all ease-in" />
+                                    <HiOutlineHeart className="absolute text-4xl text-green-500" />
+                                    <HiHeart className="absolute text-4xl text-green-500 cursor-pointer hover:hidden transition-all ease-in" />
                                 </div>
                             </div>
                         </div>

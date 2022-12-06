@@ -10,11 +10,17 @@ import Loader from '../Loader/Loader'
 const Favorites = () => {
     const totalSearches = useSelector(state => state.objSearches.searches);
     const [loading, setLoading] = useState(true);
-    const [emptyFavs, setEmptyFavs] = useState(false);
+    const [emptyFavs, setEmptyFavs] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
-        totalSearches ? setLoading(false) : setLoading(true)
+        totalSearches ? setLoading(false) : setLoading(true);
+        for (let i = 0; i < totalSearches.length; i++) {
+            if (totalSearches[i].favs) {
+                setEmptyFavs(true)
+                console.log(emptyFavs);
+            }
+        }
 
     }, [totalSearches])
 
@@ -26,7 +32,7 @@ const Favorites = () => {
                     <div>
                         <button onClick={() => navigate(-1)} className="bg-white pl-4 pr-6 py-2 rounded ml-2 mt-6 md:mt-6 mb-0"> <HiArrowSmLeft className="inline-block text-2xl " /> Volver </button>
                     </div>
-                    {totalSearches.length > 0 ? totalSearches.map((selectedSearch) =>
+                    {totalSearches.length > 0 && emptyFavs ? totalSearches.map((selectedSearch) =>
                         <div className="my-auto md:w-11/12 md:m-auto" >
                             {selectedSearch.favs.length > 3 ?
                                 <HiArrowCircleRight className="absolute right-5 text-4xl my-64 text-white " />

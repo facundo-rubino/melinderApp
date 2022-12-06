@@ -24,10 +24,7 @@ export const searchesSlice = createSlice({
             findSearch.result.push(action.payload.car);
 
             let itemDropIndex = findSearch.favs.findIndex(s => s.id === action.payload.car.id);
-            console.log(itemDropIndex);
             findSearch.favs.splice(itemDropIndex, 1);
-
-
         },
         discardItem: (state, action) => {
             let findSearch = state.searches.find(s => s.id === Number(action.payload.idSearch));

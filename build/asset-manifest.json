@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d25dd17a.css",
+    "main.js": "/static/js/main.d461a410.js",
+    "static/js/787.b7be0c31.chunk.js": "/static/js/787.b7be0c31.chunk.js",
+    "static/media/historicPic.jpg": "/static/media/historicPic.e0a98a973ad786c4fa04.jpg",
+    "static/media/car_interior.jpg": "/static/media/car_interior.ec042f4412b1b6c12c99.jpg",
+    "static/media/Fuel.svg": "/static/media/Fuel.aa8bdf280a676cdd4e26a523a6e693a6.svg",
+    "static/media/Trim.svg": "/static/media/Trim.a2b69ec98e0e66b2399a1509054f9b32.svg",
+    "static/media/Transmission.svg": "/static/media/Transmission.368be58965df346b2bdb11217455b6bb.svg",
+    "static/media/Brand.svg": "/static/media/Brand.5f67fb8b27c7dd98040ae996bfa3910a.svg",
+    "static/media/Engine.svg": "/static/media/Engine.72a6c39b6c073ab4732da67147db581f.svg",
+    "static/media/Doors.svg": "/static/media/Doors.8a246ee1af6cda2379cc2ee07fbe4751.svg",
+    "index.html": "/index.html",
+    "main.d25dd17a.css.map": "/static/css/main.d25dd17a.css.map",
+    "main.d461a410.js.map": "/static/js/main.d461a410.js.map",
+    "787.b7be0c31.chunk.js.map": "/static/js/787.b7be0c31.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d25dd17a.css",
+    "static/js/main.d461a410.js"
+  ]
+}
