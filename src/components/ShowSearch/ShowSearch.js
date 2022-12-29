@@ -27,8 +27,8 @@ const ShowSearch = () => {
                 <button onClick={() => navigate(-1)} className="bg-white pl-4 pr-6 py-2 rounded ml-2 mt-8 md:mt-6 mb-0"> <HiArrowSmLeft className="inline-block text-2xl " /> Volver al buscador</button>
             </div>
             {loading ? <Loader /> :
-                <div className="flex flex-col">
-                    <div className=" max-w-6xl py-12 h-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="flex flex-col ">
+                    <div className=" max-w-6xl py-12 h-full items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {selectedSearch.result.length > 0 ? selectedSearch.result.map((search) =>
                             <Card
                                 idML={search.id}
