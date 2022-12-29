@@ -12,12 +12,7 @@ module.exports = {
         MLyellow: '#ffe600',
         MLgreen: '#00a650',
         MLblueHover: '#4851c8',
-
       },
-      backgroundImage: {
-        'desktop-main': "url('./src/img/peoplecarWeb@2x.png)",
-        'mobile-main': "url('./img/peopleWcar@2x.png')",
-      }
     },
   },
   plugins: [require('@tailwindcss/typography')],
