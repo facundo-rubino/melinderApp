@@ -10,19 +10,20 @@ import Loader from '../Loader/Loader'
 const Favorites = () => {
     const totalSearches = useSelector(state => state.objSearches.searches);
     const [loading, setLoading] = useState(true);
-    const [emptyFavs, setEmptyFavs] = useState(true);
+    const [emptyFavs, setEmptyFavs] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
         totalSearches ? setLoading(false) : setLoading(true);
-        for (let i = 0; i < totalSearches.length; i++) {
-            if (totalSearches[i].favs) {
-                setEmptyFavs(true)
-                console.log(emptyFavs);
-            }
-        }
+        /*  for (let i = 0; i < totalSearches.length; i++) {
+             if (totalSearches[i].favs) {
+                 setEmptyFavs(true)
+                 console.log(emptyFavs);
+             }
+         } */
 
     }, [totalSearches])
+
 
     return (
 
