@@ -13,6 +13,9 @@ module.exports = {
         MLgreen: '#00a650',
         MLblueHover: '#4851c8',
       },
+      backgroundImage: (theme) => ({
+        'homeImg': 'url(/src/img/homePhoto.jpg)',
+      }),
     },
   },
   plugins: [require('@tailwindcss/typography')],
