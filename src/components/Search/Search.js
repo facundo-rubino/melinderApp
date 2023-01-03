@@ -89,26 +89,23 @@ const Search = () => {
         <>
             <div className="w-full h-screen relative">
                 <div className="w-full h-full flex flex-col absolute top-0 left-0 justify-center items-center">
-                    <p className="text-white text-xl font-bold">Optimizá tus búsquedas con MeLinder</p>
-                    <input ref={inpQuery} type="text" className="my-5 p-2 rounded w-3/5 pl-[20px]" placeholder="Buscá un auto..." />
-                    <input type="button" onClick={() => getCars(0, [])} className="text-white bg-MLblue p-2 rounded w-1/3 cursor-pointer" value="Buscar" />
+                    <p className="text-white text-3xl font-normal text-center ">Optimizá tus búsquedas <br /> con <strong>MeLinder</strong></p>
+                    <input ref={inpQuery} type="text" className="my-5 p-2 rounded w-4/5 pl-[20px] sm:w-3/5 md:w-2/5" placeholder="Buscá un auto..." />
+                    <input type="button" onClick={() => getCars(0, [])} className="text-white bg-MLblue p-3 rounded w-3/6 cursor-pointer font-bold text-xl sm:w-1/6 sm:p-3" value="Buscar" />
                     <ToastContainer />
                 </div>
                 <img src={homePhoto} className="w-full object-cover h-screen" />
             </div>
-            <div className="md:flex h-screen bg-gray-200 overflow-y-hidden">
-                <div className="flex flex-col items-center h-auto mt-10 pb-10 ">
-                    <div className="md:pb-0 sm:w-1/2 ">
-                        <img className='w-72 mb-3 ' src={imgInicio} alt='Imagen de inicio' />
-                    </div>
-                    <div className="md:pb-0 sm:w-1/2 ">
-                        <p className="text-center w-10/12 mb-4 text-MLblue">Melinder es la primer app en la que podrás <strong> optimizar tus búsquedas </strong> de autos realizadas en Mercado Libre.
-                            Agregá a <strong> favoritos </strong> para seguir de cerca tus autos más deseados, o <strong> descartalos</strong>, para que no te cruces
-                            una y otra vez con el mismo resultado no deseado.
-                        </p>
-                    </div>
+            <div className="flex flex-col md:flex-row ">
+                <div className="md:pb-0 md:basis-1/2 w-96 m-auto my-10">
+                    <img className="w-9/12 m-auto" src={imgInicio} alt='Imagen de inicio' />
                 </div>
-
+                <div className="md:pb-0 md:basis-1/2 my-auto ">
+                    <p className="text-center w-10/12 text-MLblue m-auto mb-10 text-md sm:text-xl sm:mb-0">Melinder es la primer app en la que podrás <strong> optimizar tus búsquedas </strong> de autos realizadas en Mercado Libre.<br />
+                        Agregá a <strong> favoritos </strong> para seguir de cerca tus autos más deseados, o <strong> descartalos</strong>, para que no te cruces
+                        una y otra vez con el mismo resultado no deseado.
+                    </p>
+                </div>
             </div>
         </>
     )
