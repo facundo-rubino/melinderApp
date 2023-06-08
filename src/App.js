@@ -15,7 +15,6 @@ function App() {
 
   const params = useParams();
 
-
   return (
     <Provider store={store}>
       <BrowserRouter>
