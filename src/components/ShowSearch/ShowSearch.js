@@ -38,6 +38,7 @@ const ShowSearch = () => {
                                 currency_id={search.currency_id}
                                 attributes={search.attributes}
                                 thumbnail={search.thumbnail}
+                                link={search.permalink}
                             />)
                             : <div className="grid-cols-none m-auto text-center text-MLblue h-screen content-center	">
                                 <p className="font-bold text-3xl pb-3">Nada por aquí</p>

@@ -9,7 +9,6 @@ import TrimSVG from '../../img/cardsSVG/Trim.svg'
 import Loader from '../Loader/Loader'
 
 const CarAttributes = (props) => {
-
     const [arePropsReady, setArePropsReady] = useState(false);
 
     let transformDoorNumbers = (doorsNumber) => {

@@ -6,7 +6,7 @@ import { transformImageUrl, numberWithDots, formatCurrency } from '../../utils/u
 import { saveFav, discardItem } from "../../features/searchesSlice";
 import Loader from "../Loader/Loader"
 
-const Card = ({ id, idML, key, title, price, currency_id, attributes, thumbnail }) => {
+const Card = ({ id, idML, key, title, price, currency_id, attributes, thumbnail, link }) => {
     const dispatch = useDispatch();
     let { idSearch } = useParams();
     const [loading, setLoading] = useState(false)

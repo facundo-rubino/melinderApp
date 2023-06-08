@@ -79,6 +79,7 @@ const CarDetail = () => {
                     lastUpdate: dateFormat(res.last_updated),
                     saleTerms: saleTerms,
                     pictures: res.pictures,
+                    link: res.permalink,
                 })
                 console.log(selectedCarData);
             });
@@ -142,9 +143,12 @@ const CarDetail = () => {
                             <div>
                                 <h1 className="text-2xl font-bold lg:text-3xl">{selectedCarData.title ? selectedCarData.title : "N/D"}</h1>
                                 <p className="mt-1 text-sm text-gray-500">Ultima actualización: {selectedCarData.lastUpdate ? selectedCarData.lastUpdate : "N/D"}</p>
+
+                                <a target="_blank" href={selectedCarData.link ? selectedCarData.link : ""} className="bg-transparent p-2 rounded block mt-4 w-1/4 m-auto text-MLblue border-2 border-MLblue hover:bg-MLblue hover:text-white  cursor-pointer
+                    transition-all ease-in duration-200"> Link a publicación MercadoLibre </a>
                             </div>
 
-                            <div className="my-6 sm:w-6/12 m-auto">
+                            <div className=" sm:w-6/12 m-auto">
                                 <div className="">
                                     <div className="flex">
                                         <Swiper navigation={true} modules={[Navigation]} className="aspect-[4/3]">
