@@ -29,7 +29,7 @@ const Search = () => {
 
 
         if (formattedQuery !== "" && !existentQuery) {
-            fetch(`https://api.mercadolibre.com/sites/MLU/search?category=MLU1744&q= ${formattedQuery} &offset=` + offset)
+          fetch(`http://localhost:3001/api/search?q=${encodeURIComponent(formattedQuery)}`)
                 .then(r => r.json())
                 .then(res => {
                     let total = res.paging.total;
